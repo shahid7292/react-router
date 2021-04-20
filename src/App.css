@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(26, 38, 43);
+  color: white;
+  min-height: 10vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.list{
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.list li:hover{
+  color: rgb(19, 235, 48);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.list1{
+  list-style: none;
+}
+.list1 li:hover{
+  color: rgb(19, 235, 48);
+}
+
+@media screen and (max-width: 800px) {
+  .list{
+    width: 25%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .list{
+    width: 35%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .list{
+    width: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list{
+    width: 55%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .list{
+    width: 65%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .list{
+    width: 75%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.shah{
+  margin-top: 15vh;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.shah2{
+  margin-top: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
+}
+
+.red{
+  color: red;
+}
+
+.linkpost{
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.linkpost li:hover{
+  color: rgb(19, 235, 48);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.prodback{
+  max-width: 720px;
+  margin: 18px auto;
+  padding: 18px;
+  border: 3px solid black;
+  border-radius: 30px;
+  background-color: rgb(35, 84, 105);
+}
+
+.posttitle{
+  max-width: 600px;
+  margin: 18px auto;
+  padding: 12px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 18px;
+  background-color: rgb(7, 68, 68);
+  color: rgb(19, 235, 48);;
+}
+
+.postbody{
+  max-width: 840px;
+  margin: 30px auto;
+  padding: 12px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 18px;
+  background-color: rgb(7, 68, 68);
+  color: rgb(19, 235, 48);;
 }
