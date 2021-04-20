@@ -30,14 +30,24 @@ nav{
   color: rgb(19, 235, 48);
 }
 
+@media screen and (max-width: 1050px) {
+  .list{
+    width: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .list{
+    width: 35%;
+  }
+}
 @media screen and (max-width: 800px) {
   .list{
-    width: 25%;
+    width: 35%;
   }
 }
 @media screen and (max-width: 700px) {
   .list{
-    width: 35%;
+    width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
