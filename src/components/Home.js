@@ -1,26 +1,29 @@
 import React from 'react'
 import '../App.css'
-import {Link} from 'react-router-dom'
-import {useDispatch,useSelector } from 'react-redux'
-import {login,logout} from '../actions/index'
+import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { login, logout } from '../actions/index'
 
 function Home() {
 
-    const dispatch=useDispatch();   
-    const log = useSelector(state => state.log) 
+    const dispatch = useDispatch();
+    const log = useSelector(state => state.log)
     return (
         <>
             <div className="login">
                 <br />
-                <button onClick={()=>dispatch(login())}>Login</button>
-                <br />
                 {
-                    log ? <h3>You are logged in you can visit admin page</h3> :<h3>If you want to visit admin page Please login</h3>
+                    log ? <h3>You are logged in you can visit admin page</h3> : <h3>If you want to visit admin page Please login</h3>
                 }
-                <Link to="/admin">
-                    <button>Go to admin page</button>
-                </Link>
-               
+                {
+                    log ?
+                        <Link to="/admin">
+                            <button>Go to admin page</button>
+                        </Link> :
+                        <button onClick={() => dispatch(login())}>Login</button>
+                }
+
+
 
             </div>
 
