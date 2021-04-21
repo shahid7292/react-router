@@ -135,3 +135,21 @@ nav{
   background-color: rgb(7, 68, 68);
   color: rgb(19, 235, 48);;
 }
+
+.postcontainer{
+  text-align: center;
+}
+
+.postcontainer button{
+  margin: 18px;
+  padding: 12px;
+  background-color: black;
+  color:crimson;
+  font-size: 24px;
+  font-weight: 650;
+}
+
+.postcontainer button:hover{
+  background-color: rgb(99, 216, 216);
+  color: rgb(196, 13, 50);
+}
