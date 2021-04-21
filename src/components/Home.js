@@ -17,9 +17,6 @@ function Home() {
                 {
                     log ? <h3>You are logged in you can visit admin page</h3> :<h3>If you want to visit admin page Please login</h3>
                 }
-                <button onClick={()=>dispatch(logout())}>Logout</button>
-                <br />
-                <br />
                 <Link to="/admin">
                     <button>Go to admin page</button>
                 </Link>

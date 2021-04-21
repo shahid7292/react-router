@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <ProtectedRoute admin={log} Component={Admin} path="/admin" />
           <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/about" render={()=><About/>} />
           <Route path="/products" exact component={Products} />
           <Route path="/products/:id" component={Product} />
         </Switch>
