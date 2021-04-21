@@ -16,7 +16,7 @@ function Admin() {
                 Valuable information only admin can see
             </h1>
         </div>
-    )
+    )   
 }
 
 export default Admin
