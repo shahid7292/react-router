@@ -1,8 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {logout} from '../actions/index'
 import {useDispatch} from 'react-redux'
 function Admin() {
     const dispatch=useDispatch();  
+
+    useEffect(() => {
+        return () => {
+            dispatch(logout())
+        }
+    })
 
     return (
 
