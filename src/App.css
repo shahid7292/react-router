@@ -101,6 +101,10 @@ nav{
   color: white;
 }
 
+.linkpost li{
+  list-style: square;
+}
+
 .linkpost li:hover{
   color: rgb(19, 235, 48);
 }

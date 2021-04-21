@@ -1,14 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../App.css';
-import {useHistory} from 'react-router-dom'
+import {useHistory, useParams,useRouteMatch} from 'react-router-dom'
 
-function Product({match}) {
+function Product() {
     const [post, setPost] = useState({})
     const [loading, setLoading] = useState(true)
 
+
+    const params=useParams();
+    console.log(params);
+
+    const history=useHistory();
+
+    const match=useRouteMatch("/products/2");
+    console.log(match)
+    const showbutton= match && match.isExact;
+
+
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${match.params.id}`)
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
             .then(response => {
                 setPost(response.data)
                 setTimeout(() => {
@@ -18,9 +29,7 @@ function Product({match}) {
             .catch(error => {
                 console.log(error)
             })
-    }, [match.params.id])
-
-    const history=useHistory();
+    }, [params.id]) 
 
     const handleClick=()=>{
         console.log("clicked")
@@ -34,6 +43,9 @@ function Product({match}) {
                     <button onClick={handleClick}>{"Go back to products >>>"}</button>
                     <h3 className="posttitle">{post.title}</h3>
                     <h3 className="postbody">{post.body}</h3>
+                    {
+                        showbutton && <h2>This is the post you are looking for</h2>
+                    }
                 </div>}
         </div>
     )
